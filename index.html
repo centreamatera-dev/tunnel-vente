@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bilan peau gratuit à Montélimar | Centre Amatera</title>
+  <meta name="description" content="30 minutes avec une infirmière : analyse de peau IA Check et plan de soins chiffré, sans engagement. Centre Amatera, Montélimar.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main class="page">
+    <div class="sun" aria-hidden="true"></div>
+
+    <section class="intro">
+      <p class="wordmark">Centre Amatera</p>
+      <h1>Bilan peau gratuit à Montélimar, avec une infirmière</h1>
+      <p class="sub">30 minutes, analyse de peau IA Check, plan de soins chiffré. Sans engagement.</p>
+      <ul class="benefits">
+        <li>Vous savez ce que votre peau ou votre pilosité demande, et ce qui ne sert à rien.</li>
+        <li>Vous repartez avec un devis écrit et un calendrier de séances.</li>
+        <li>Vous êtes reçue par une infirmière diplômée, avec du matériel professionnel.</li>
+      </ul>
+    </section>
+
+    <section class="card" aria-labelledby="form-title">
+      <h2 id="form-title">Réservez votre bilan</h2>
+      <p class="lead">Trois champs, puis une courte vidéo qui explique le déroulé.</p>
+
+      <form id="lead-form" novalidate>
+        <div class="field">
+          <label for="first_name">Prénom</label>
+          <input id="first_name" name="first_name" type="text" autocomplete="given-name" maxlength="80" required>
+          <p class="field-error" id="err-first_name"></p>
+        </div>
+
+        <div class="field">
+          <label for="phone">Mobile</label>
+          <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="06 12 34 56 78" required>
+          <p class="field-error" id="err-phone"></p>
+        </div>
+
+        <div class="field">
+          <label for="email">E-mail</label>
+          <input id="email" name="email" type="email" autocomplete="email" maxlength="254" required>
+          <p class="field-error" id="err-email"></p>
+        </div>
+
+        <div class="trap" aria-hidden="true">
+          <label for="website">Ne pas remplir ce champ</label>
+          <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+        </div>
+
+        <p class="form-error" id="form-error" role="alert"></p>
+
+        <button class="button" id="submit" type="submit">Je réserve mon bilan gratuit</button>
+
+        <p class="fine">
+          En cliquant sur le bouton, vous acceptez d'être contactée par le Centre Amatera au sujet de votre bilan peau.
+          Vos données ne sont pas revendues. <a id="legal-link" href="/mentions-legales">Mentions légales</a>
+        </p>
+      </form>
+    </section>
+  </main>
+
+  <script src="/js/config.js"></script>
+  <script src="/js/capture.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Choisissez votre créneau | Centre Amatera</title>
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main class="page page--single">
+    <div class="sun sun--small" aria-hidden="true"></div>
+
+    <div class="column">
+      <p class="wordmark">Centre Amatera</p>
+      <h1 id="title">Plus qu'une étape, choisissez votre créneau</h1>
+      <p class="sub" id="intro">Cinq questions, environ une minute. Elles permettent à l'infirmière de préparer votre bilan.</p>
+
+      <section class="missing" id="missing" hidden>
+        <p>Nous ne retrouvons pas votre inscription. Reprenez depuis la première page, cela prend une minute.</p>
+        <a class="button" href="/">Revenir à l'inscription</a>
+      </section>
+
+      <form class="questions" id="questions" novalidate>
+        <fieldset id="f-priority">
+          <legend>Quelle est votre priorité ?</legend>
+          <div class="choices">
+            <label class="choice"><input type="radio" name="priority" value="laser"><span>Épilation laser</span></label>
+            <label class="choice"><input type="radio" name="priority" value="visage"><span>Soin du visage</span></label>
+            <label class="choice"><input type="radio" name="priority" value="les-deux"><span>Les deux</span></label>
+          </div>
+          <p class="field-error" id="err-priority"></p>
+        </fieldset>
+
+        <div class="field" id="f-zone">
+          <label for="zone">Quelle zone, ou quel souci de peau ?</label>
+          <input id="zone" name="zone" type="text" maxlength="200" placeholder="Ex : jambes, taches, peau terne">
+          <p class="field-error" id="err-zone"></p>
+        </div>
+
+        <fieldset id="f-contraindication">
+          <legend>Êtes-vous enceinte, allaitante, sous traitement photosensibilisant, ou bronzée récemment ?</legend>
+          <div class="choices">
+            <label class="choice"><input type="radio" name="contraindication" value="non"><span>Non</span></label>
+            <label class="choice"><input type="radio" name="contraindication" value="oui"><span>Oui</span></label>
+            <label class="choice"><input type="radio" name="contraindication" value="ne-sais-pas"><span>Je ne sais pas</span></label>
+          </div>
+          <p class="field-error" id="err-contraindication"></p>
+        </fieldset>
+
+        <fieldset id="f-experience">
+          <legend>Avez-vous déjà fait des séances de laser ou de peeling ?</legend>
+          <div class="choices">
+            <label class="choice"><input type="radio" name="experience" value="jamais"><span>Jamais</span></label>
+            <label class="choice"><input type="radio" name="experience" value="laser"><span>Laser</span></label>
+            <label class="choice"><input type="radio" name="experience" value="soin-visage"><span>Peeling ou soin du visage</span></label>
+            <label class="choice"><input type="radio" name="experience" value="les-deux"><span>Les deux</span></label>
+          </div>
+          <p class="field-error" id="err-experience"></p>
+        </fieldset>
+
+        <fieldset id="f-source">
+          <legend>Comment avez-vous connu le centre ?</legend>
+          <div class="choices">
+            <label class="choice"><input type="radio" name="source" value="google"><span>Google</span></label>
+            <label class="choice"><input type="radio" name="source" value="instagram"><span>Instagram</span></label>
+            <label class="choice"><input type="radio" name="source" value="bouche-a-oreille"><span>Bouche-à-oreille</span></label>
+            <label class="choice"><input type="radio" name="source" value="flyer"><span>Flyer</span></label>
+            <label class="choice"><input type="radio" name="source" value="autre"><span>Autre</span></label>
+          </div>
+          <p class="field-error" id="err-source"></p>
+        </fieldset>
+
+        <p class="form-error" id="form-error" role="alert"></p>
+
+        <button class="button" id="submit" type="submit">Voir les créneaux</button>
+      </form>
+
+      <section class="booking" id="booking" hidden aria-labelledby="booking-title">
+        <h2 id="booking-title" tabindex="-1">Merci, vos réponses sont enregistrées</h2>
+        <p id="booking-text">Le bilan dure 30 minutes. Choisissez le créneau qui vous convient, vous recevrez une confirmation par SMS et par e-mail.</p>
+        <p class="note" id="booking-note" hidden>Vous avez signalé un point à vérifier. L'infirmière en parlera avec vous avant le rendez-vous : cela ne vous empêche pas de réserver votre bilan.</p>
+        <a class="button" id="planity-link" href="https://www.planity.com/" rel="noopener">Choisir mon créneau</a>
+      </section>
+    </div>
+  </main>
+
+  <script src="/js/config.js"></script>
+  <script src="/js/reservation.js"></script>
+</body>
+</html>
